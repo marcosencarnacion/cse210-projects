@@ -75,7 +75,7 @@ class Program
 
         //Grade letter is printed with sign.
 
-        Console.WriteLine($"Your grade letter is: {gradeLetter} {sign}");
+        Console.WriteLine($"Your grade letter is: {gradeLetter}{sign}");
 
         //Message depending on the grade is displayed to user.
 
