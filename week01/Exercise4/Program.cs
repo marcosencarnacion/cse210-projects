@@ -40,8 +40,12 @@ class Program
             average = (double)sum / numbers.Count;
         }
 
+        //3. Find the maximum, or largest, number in the list.
+        int maxNumber = numbers.Max();
+
         Console.WriteLine($"The total sum of the numbers is: {sum}");
         Console.WriteLine($"The average of the numbers is: {average}");
+        Console.WriteLine($"The largest number is: {maxNumber}");
 
     }
 }
