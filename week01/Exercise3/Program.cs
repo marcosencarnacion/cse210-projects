@@ -46,7 +46,10 @@ class Program
 
         //Part 3. Generate a random magic number between 1 and 100.
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1, 100);
+        int magicNumber = randomGenerator.Next(1, 100);
+
+        //Initialize the guess variable.
+        int guessNumber = -1;
 
         Console.WriteLine("I have generated a random between 1 and 100. Can you guess it?");
 
