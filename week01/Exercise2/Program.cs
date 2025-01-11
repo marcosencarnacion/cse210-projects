@@ -55,8 +55,8 @@ class Program
             sign = "";
         }
 
-
-        if (gradeLetter != "F") // No "+" or "-" for grade F
+        else if (gradeLetter != "F") // No "+" or "-" for grade F
+        {
             if (lastDigit >= 7)
             {
                 sign = "+";
@@ -66,6 +66,8 @@ class Program
             {
                 sign = "-";
             }
+        }
+
 
 
         //Grade letter is printed with sign.
