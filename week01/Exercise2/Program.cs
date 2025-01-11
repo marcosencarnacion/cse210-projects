@@ -58,16 +58,24 @@ class Program
             sign = "-";
         }
 
+        else
+        {
+            sign = "";
+        }
 
+        if (number >= 93)
+        {
+            sign = "";
+        }
 
+        if (gradeLetter == "F")
+        {
+            sign = "";
+        }
 
+        //Grade letter is printed with sign.
 
-
-
-
-        //Grade letter is printed.
-
-        Console.WriteLine($"Your grade letter is: {gradeLetter}");
+        Console.WriteLine($"Your grade letter is: {gradeLetter} {sign}");
 
         //Message depending on the grade is displayed to user.
 
