@@ -23,7 +23,25 @@ class Program
             {
                 numbers.Add(userInput);
             }
+        } while (userInput != 0);  // Continue the loop until the user enters 0
+
+
+        //1. Compute the sum, or total, of the numbers in the list.
+        int sum = 0;
+        foreach (int num in numbers)
+        {
+            sum += num;
         }
+
+        //2. Compute the average of the numbers in the list.
+        double average = 0;
+        if (numbers.Count > 0)
+        {
+            average = (double)sum / numbers.Count;
+        }
+
+        Console.WriteLine($"The total sum of the numbers is: {sum}");
+        Console.WriteLine($"The average of the numbers is: {average}");
 
     }
 }
