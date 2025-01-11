@@ -13,7 +13,7 @@ class Program
         Console.Write("What is your guess? ");
         int guessNumber = int.Parse(Console.ReadLine());
 
-        //# 2. Adding a loop until the user guesses the number.
+        //# 2. Adding an if statement to prompt the user to guess a higher, lower number or if they guessed it.
         if (guessNumber < magicNumber)
         {
             Console.Write("Higher");
