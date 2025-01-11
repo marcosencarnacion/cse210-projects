@@ -6,10 +6,14 @@ class Program
     {
         Console.WriteLine("Hello World! This is the Exercise2 Project.");
 
+        //Core Requirements
+
         //User is asked to enter his grade percentage.
         Console.WriteLine("What is your grade percentage?");
         string gradePercentage = Console.ReadLine();
         int number = int.Parse(gradePercentage);
+
+        //Letter Variable Assigned
 
         string gradeLetter = "";
 
@@ -38,7 +42,11 @@ class Program
             gradeLetter = "F";
         }
 
+        //Grade letter is printed.
+
         Console.WriteLine($"Your grade letter is: {gradeLetter}");
+
+        //Message depending on the grade is displayed to user.
 
         if (number >= 70)
         {
