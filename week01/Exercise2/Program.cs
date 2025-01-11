@@ -42,36 +42,31 @@ class Program
             gradeLetter = "F";
         }
 
-        //Stretch Challenge
-        //#1 Determine "+" "-" sign for the letter
+        //Stretch Challenge: Determine "+" "-" sign for the letter
 
         string sign = "";
         int lastDigit = number % 10;
 
-        if (lastDigit >= 7)
-        {
-            sign = "+";
-        }
+        // Determine "+" or "-" based on the last digit
 
-        else if (lastDigit < 3)
-        {
-            sign = "-";
-        }
-
-        else
+        //Check for a perfect grade (100) and avoid adding a sign
+        if (number == 100)
         {
             sign = "";
         }
 
-        if (number >= 93)
-        {
-            sign = "";
-        }
 
-        if (gradeLetter == "F")
-        {
-            sign = "";
-        }
+        if (gradeLetter != "F") // No "+" or "-" for grade F
+            if (lastDigit >= 7)
+            {
+                sign = "+";
+            }
+
+            else if (lastDigit < 3)
+            {
+                sign = "-";
+            }
+
 
         //Grade letter is printed with sign.
 
