@@ -26,17 +26,17 @@ class Program
             //# 3. Adding an if statement to prompt the user to guess a higher, lower number or if they guessed it.
             if (guessNumber < magicNumber)
             {
-                Console.Write("Higher");
+                Console.WriteLine("Higher");
             }
 
             else if (guessNumber > magicNumber)
             {
-                Console.Write("Lower");
+                Console.WriteLine("Lower");
             }
 
             else
             {
-                Console.Write("You guessed it!");
+                Console.WriteLine("You guessed it!");
             }
         }
 
