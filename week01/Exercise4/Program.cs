@@ -44,9 +44,17 @@ class Program
         //3. Find the maximum, or largest, number in the list.
         int maxNumber = numbers.Max();
 
+        //Stretch Challenge.
+        //1. Find the smallest positive number (closest to zero) based on user input.
+        List<int> positiveNumbers = numbers.Where(n => n > 0).ToList();
+
+        //
+        int smallestPositive = positiveNumbers.DefaultIfEmpty(int.MaxValue).Min();
+
         Console.WriteLine($"The total sum of the numbers is: {sum}");
         Console.WriteLine($"The average of the numbers is: {average}");
         Console.WriteLine($"The largest number is: {maxNumber}");
+        Console.WriteLine($"The smallest positive number is: {smallestPositive}");
 
     }
 }
