@@ -50,7 +50,7 @@ class Program
         // Determine "+" or "-" based on the last digit
 
         //Check for a perfect grade (100) and avoid adding a sign
-        if (number == 100)
+        if (number >= 97)
         {
             sign = "";
         }
