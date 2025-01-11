@@ -42,6 +42,29 @@ class Program
             gradeLetter = "F";
         }
 
+        //Stretch Challenge
+        //#1 Determine "+" "-" sign for the letter
+
+        string sign = "";
+        int lastDigit = number % 10;
+
+        if (lastDigit >= 7)
+        {
+            sign = "+";
+        }
+
+        else if (lastDigit < 3)
+        {
+            sign = "-";
+        }
+
+
+
+
+
+
+
+
         //Grade letter is printed.
 
         Console.WriteLine($"Your grade letter is: {gradeLetter}");
@@ -57,6 +80,9 @@ class Program
         {
             Console.WriteLine("Stay focused and you'll get it next time!");
         }
+
+
+
 
     }
 }
