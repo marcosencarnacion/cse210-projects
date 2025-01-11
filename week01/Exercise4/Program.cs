@@ -48,13 +48,24 @@ class Program
         //1. Find the smallest positive number (closest to zero) based on user input.
         List<int> positiveNumbers = numbers.Where(n => n > 0).ToList();
 
-        //
+        //Use DefaultEmpty() to handle the case when there are no positive numbers.
         int smallestPositive = positiveNumbers.DefaultIfEmpty(int.MaxValue).Min();
 
         Console.WriteLine($"The total sum of the numbers is: {sum}");
         Console.WriteLine($"The average of the numbers is: {average}");
         Console.WriteLine($"The largest number is: {maxNumber}");
         Console.WriteLine($"The smallest positive number is: {smallestPositive}");
+        Console.WriteLine($"The sorted list is:");
+
+        //Stretch Challenge
+        //2.Sort the list and print each number in vertical order
+        List<int> sortedNumbers = new List<int>(); //Variable to store sorted list
+        sortedNumbers = numbers.OrderBy(n => n).ToList();
+        foreach (int number in sortedNumbers)
+        {
+            Console.WriteLine(number);
+        }
+
 
     }
 }
