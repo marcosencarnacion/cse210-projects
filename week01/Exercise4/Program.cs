@@ -35,7 +35,7 @@ class Program
         }
 
         //2. Compute the average of the numbers in the list.
-        double average = 0;
+        double average = 0; //Using double for precision
         if (numbers.Count > 0)
         {
             average = (double)sum / numbers.Count;
