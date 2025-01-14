@@ -1,6 +1,8 @@
 using System;
 
-public class Resumes
+public class Resume
 {
-    publi
+    public string _name;
+
+
 }
