@@ -31,4 +31,16 @@ class Program
 
         Console.WriteLine("Goodbye!"); // Display a goodbye essage when quitting
     }
+
+    // Method to display the menu with available choices
+    static void DisplayMenu()
+    {
+        Console.WriteLine("Please select one of the following choices:");
+        Console.WriteLine("1. Write in my journal");
+        Console.WriteLine("2. Display my journal");
+        Console.WriteLine("3. Save journal to file");
+        Console.WriteLine("4. Load journal to file");
+        Console.WriteLine("5. Quit");
+        Console.WriteLine("What would you like to do? ");
+    }
 }
