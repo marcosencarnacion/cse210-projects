@@ -38,23 +38,28 @@ public class Journal
         }
     }
 
-    public void AddEntry(Entry newEntry)
-    {
-
-    }
-
-    public void DisplayAll()
-    {
-
-    }
-
-    public void SaveToFile(string filename)
-    {
-
-    }
-
+    // Method to load journal entries from a file
     public void LoadFromFile(string filename)
     {
+        _entries.Clear(); // Clear any existing before loading the file.
+        using (StreamReader reader = new StreamReader(filename)) // Open the file for reading
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null) // Read the file line by line
+            {
+                // Split the line into parts: Date|Prompt|Entry
+                string[] parts = line.Split('|');
+                if (parts.Length == 3) // Ensure the line has the correct number of parts
+                {
+                    string date = parts[0];
+                    string promptText = parts[1];
+                    string EntryText = parts[2];
 
+                    // Create a new Entry and add it to the list
+                    Entry entry = new Entry(date, promptText, entryText);
+                    _entries.Add(entry);
+                }
+            }
+        }
     }
 }
