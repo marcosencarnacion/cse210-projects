@@ -53,7 +53,7 @@ public class Journal
                 {
                     string date = parts[0];
                     string promptText = parts[1];
-                    string EntryText = parts[2];
+                    string entryText = parts[2];
 
                     // Create a new Entry and add it to the list
                     Entry entry = new Entry(date, promptText, entryText);
