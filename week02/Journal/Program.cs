@@ -32,6 +32,12 @@ class Program
         Console.WriteLine("Goodbye!"); // Display a goodbye essage when quitting
     }
 
+    // Method to display the welcome message whenthe program starts
+    static void DisplayWelcomeMessage()
+    {
+        Console.WriteLine("Welcome to the Journal Program!");
+    }
+
     // Method to display the menu with available choices
     static void DisplayMenu()
     {
