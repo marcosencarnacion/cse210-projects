@@ -72,7 +72,7 @@ class Program
 
             case 3:
                 // User wants to save the journal to a file
-                Console.Write("Enter the filename to save the journalL ");
+                Console.Write("Enter the filename to save the journal: ");
                 string saveFileName = Console.ReadLine(); // Get the filename from user
                 journal.SaveToFile(saveFileName); // Call the SaveToFile method
                 Console.WriteLine("Journal saved!");
