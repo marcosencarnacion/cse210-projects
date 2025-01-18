@@ -32,8 +32,8 @@ public class Journal
         {
             foreach (var entry in _entries)
             {
-                // Write each entry in the format: Date|Prompt|Prompt Entry
-                writer.WriteLine($"{entry.Date}|{entry.PromptText}|{entry.EntryText}");
+                // Write each entry in the format: Date|Prompt|Prompt|Time Entry
+                writer.WriteLine($"{entry.Date}|{entry.PromptText}|{entry.EntryText}|{entry.Time}");
             }
         }
     }
@@ -47,16 +47,17 @@ public class Journal
             string line;
             while ((line = reader.ReadLine()) != null) // Read the file line by line
             {
-                // Split the line into parts: Date|Prompt|Entry
+                // Split the line into parts: Date|Prompt|Entry|Time
                 string[] parts = line.Split('|');
-                if (parts.Length == 3) // Ensure the line has the correct number of parts
+                if (parts.Length == 4) // Ensure the line has the correct number of parts
                 {
                     string date = parts[0];
                     string promptText = parts[1];
                     string entryText = parts[2];
+                    string entryTime = parts[3];
 
                     // Create a new Entry and add it to the list
-                    Entry entry = new Entry(date, promptText, entryText);
+                    Entry entry = new Entry(date, promptText, entryText, entryTime);
                     _entries.Add(entry);
                 }
             }

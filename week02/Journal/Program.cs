@@ -59,8 +59,15 @@ class Program
                 // User wants to write in the journal
                 string randomPrompt = promptGenerator.GetRandomPrompt();
                 Console.WriteLine(randomPrompt); // Display the prompt
+                Console.Write("Your response: ");
                 string userEntry = Console.ReadLine(); // Get the user's entry
-                Entry entry = new Entry(DateTime.Now.ToShortDateString(), randomPrompt, userEntry); // Create a new entry
+
+                // Exceeding requirements. Include both date and time
+                string date = DateTime.Now.ToShortDateString();
+                string time = DateTime.Now.ToLongTimeString();
+
+                // Create a new Entry with time included
+                Entry entry = new(DateTime.Now.ToShortDateString(), randomPrompt, userEntry, time);
 
                 journal.AddEntry(entry); // Add the entry to the journal
                 break;
