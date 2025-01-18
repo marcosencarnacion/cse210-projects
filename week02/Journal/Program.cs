@@ -2,6 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
+// This program is a Journal application that allows users to add, display, save, and load entries.
+// Enhancements made (Exceeding Requirements):
+// 1. Added a 'Time' property to the Entry class to track the time each journal entry was created.
+// 2. Updated the SaveToFile and LoadFromFile methods in the Journal class to include the 'Time' property in the saved data.
+// 3. Modified the Display method in the Entry class to show the time along with the date.
+// 4. Enhanced menu to display and handle time features.
+// These changes provide more detailed tracking of entries, while enhancing user experience.
+
+
 class Program
 {
     static void Main(string[] args)
