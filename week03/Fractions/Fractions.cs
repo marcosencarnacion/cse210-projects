@@ -36,7 +36,7 @@ public class Fraction
     // Method to obtain the value of the decimal fraction
     public double GetDecimalValue()
     {
-        return (double)_top / _bottom;
+        return (double)_top / (double)_bottom;
     }
 
     // Getters
