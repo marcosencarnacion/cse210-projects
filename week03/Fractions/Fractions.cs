@@ -36,19 +36,21 @@ public class Fraction
         return (double)_top / _bottom;
     }
 
+    // Getters
     public int GetTop()
     {
         return _top;
     }
 
-    public void SetTop(int top)
-    {
-        _top = top;
-    }
-
     public int GetBottom()
     {
         return _bottom;
+    }
+
+    // Setters
+    public void SetTop(int top)
+    {
+        _top = top;
     }
 
     public void SetBottom(int bottom)
