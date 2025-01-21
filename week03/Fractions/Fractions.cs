@@ -24,5 +24,37 @@ public class Fraction
         _bottom = bottom;
     }
 
+    // Method to obtain the chain representation of the fraction
+    public string GetFractionString()
+    {
+        return $"{_top}/{_bottom}";
+    }
+
+    // Method to obtain the value of the decimal fraction
+    public double GetDecimalValue()
+    {
+        return (double)_top / _bottom;
+    }
+
+    public int GetTop()
+    {
+        return _top;
+    }
+
+    public void SetTop(int top)
+    {
+        _top = top;
+    }
+
+    public int GetBottom()
+    {
+        return _bottom;
+    }
+
+    public void SetBottom(int bottom)
+    {
+        _bottom = bottom;
+    }
+
 
 }
