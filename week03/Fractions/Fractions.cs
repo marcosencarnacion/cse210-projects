@@ -6,18 +6,21 @@ public class Fraction
     private int _bottom;
 
 
+    // Default to 1/1 with no parameters
     public Fraction()
     {
         _top = 1;
         _bottom = 1;
     }
 
+    // Constructor with 1 parameter
     public Fraction(int top)
     {
         _top = top;
         _bottom = 1;
     }
 
+    // Constructor with 2 parameters
     public Fraction(int top, int bottom)
     {
         _top = top;
