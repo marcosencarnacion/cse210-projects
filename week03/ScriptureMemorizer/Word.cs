@@ -2,8 +2,8 @@ using System;
 
 public class Word
 {
-    private string _text;       // The text of the word, for example, "Behold"
-    private bool _isHidden;     // It indicates if the word is hidden or visible
+    private string _text;    // The text of the word, for example, "Behold"
+    private bool _isHidden;  // It indicates if the word is hidden or visible
 
 
     // This constructor initializes a Word object with the given text and sets its visibility to visible by default.
