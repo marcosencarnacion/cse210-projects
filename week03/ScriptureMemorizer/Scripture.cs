@@ -59,6 +59,14 @@ public class Scripture
     // Method to check if all words are hidden
     public bool IsCompletelyHidden()
     {
+        foreach (var word in _scripture)
+        {
+            if (!word.IsHidden()) // If any word is not hidden, return false
+            {
+                return false;
+            }
+        }
 
+        return true; // All words are hidden
     }
 }
