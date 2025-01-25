@@ -30,13 +30,13 @@ public class Reference
     // Method to get the formatted reference
     public string GetDisplayText()
     {
-        if (_endVerse == null)
+        if (_endVerse == null || _endVerse == _verse)
         {
-            return $"{_book} {_chapter}: {_verse}"; // For a single verse.
+            return $"{_book} {_chapter}:{_verse}"; // For a single verse.
         }
         else
         {
-            return $"{_book} {_chapter}: {_verse}-{_endVerse}"; // For a verse range.
+            return $"{_book} {_chapter}:{_verse}-{_endVerse}"; // For a verse range.
         }
     }
 }
