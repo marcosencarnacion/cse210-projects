@@ -37,5 +37,8 @@ class Program
                 Console.WriteLine();
             }
         }
+
+        // When all words are hidden, show final message to end the program
+        Console.WriteLine("All words have been hidden. You have completed memorizing the scripture!");
     }
 }
