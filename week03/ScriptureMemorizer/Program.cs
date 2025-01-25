@@ -8,7 +8,7 @@ class Program
         Reference reference = new Reference("John", 3, 16);
 
         // Create a scripture with the reference and a text (the verse)
-        Scripture scripture = new Scripture(reference, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life");
+        Scripture scripture = new Scripture(reference, "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.");
 
         // Display the full scripture
         Console.WriteLine("Scripture: ");

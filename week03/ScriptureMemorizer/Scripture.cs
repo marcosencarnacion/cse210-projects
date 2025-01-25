@@ -23,7 +23,6 @@ public class Scripture
     {
         Random random = new Random();
         List<int> indicesHidden = new List<int>(); // To store indices of words we've already hidden
-
         int wordsHidden = 0;
 
         while (wordsHidden < numberToHide)
