@@ -25,4 +25,18 @@ public class Reference
         _verse = verse;
         _endVerse = verse; // This defines a range of verses.
     }
+
+
+    // Method to get the formatted reference
+    public string GetDisplayText()
+    {
+        if (_endVerse == null)
+        {
+            return $"{_book} {_chapter}: {_verse}"; // For a single verse.
+        }
+        else
+        {
+            return $"{_book} {_chapter}: {_verse}-{_endVerse}"; // For a verse range.
+        }
+    }
 }
