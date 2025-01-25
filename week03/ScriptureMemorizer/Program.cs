@@ -28,7 +28,7 @@ class Program
             else if (input == "")
             {
                 // Hide 3 random words
-                scripture.HideRandomWords(3);
+                scripture.HideRandomWords(1);
 
                 // Clear the console and display the updated scripture
                 Console.Clear();
@@ -39,6 +39,6 @@ class Program
         }
 
         // When all words are hidden, show final message to end the program
-        Console.WriteLine("All words have been hidden. You have completed memorizing the scripture!");
+        Console.WriteLine("Congratulations! You've successfully memorized the scripture!");
     }
 }
