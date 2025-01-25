@@ -4,7 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Exceeding Requirements: Created a library of scriptures (10 scriptures, 2 from each book)
+        // Exceeding Requirements:
+
+        // 1. A library of 10 scriptures from the Standard Works (Old Testament, New Testament, Book of Mormon, 
+        // Doctrine and Covenants, and Pearl of Great Price) is created. A random scripture is selected each time 
+        // the program runs.
+
+        // 2. Input validation has been added to ensure the user can only hit "Enter" or type "quit" to exit the 
+        // program. Any other input is handled with an error message guiding the user to make a valid entry.
+
         List<Scripture> scriptureLibrary = new List<Scripture>
         {
             // Old Testament
