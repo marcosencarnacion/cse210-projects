@@ -17,4 +17,22 @@ public class Scripture
                          .Select(word => new Word(word))  // Creates a Word object for each word 
                         .ToList(); // Converts the word list to a List<Word>
     }
+
+    // Method to hide a number of random words
+    public void HideRandomWords(int numberToHide)
+    {
+
+    }
+
+    // Method to get the scripture display text
+    public string GetDisplayText()
+    {
+
+    }
+
+    // Method to check if all words are hidden
+    public bool IsCompletelyHidden()
+    {
+
+    }
 }
