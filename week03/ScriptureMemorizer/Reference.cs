@@ -23,7 +23,7 @@ public class Reference
         _book = book;
         _chapter = chapter;
         _verse = verse;
-        _endVerse = verse; // This defines a range of verses.
+        _endVerse = endVerse; // This defines a range of verses.
     }
 
 
