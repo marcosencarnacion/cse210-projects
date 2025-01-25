@@ -21,6 +21,24 @@ public class Scripture
     // Method to hide a number of random words
     public void HideRandomWords(int numberToHide)
     {
+        Random random = new Random();
+        List<int> indicesHidden = new List<int>(); // To store indices of words we've already hidden
+
+        int wordsHidden = 0;
+
+        while (wordsHidden < numberToHide)
+        {
+            // Pick a random index within the list of words
+            int index = random.Next(_scripture.Count); // Random index between 0 and the number of words
+
+            // If this index hasn't been chosen yet, hide the word
+            if (!indicesHidden.Contains(index))
+            {
+                _scripture[index].HideWord(); // Call the method on the Word object
+                indicesHidden.Add(index);     // Add the index to the list of hidden words
+                wordsHidden++;                // Increment the number of words hidden
+            }
+        }
 
     }
 
