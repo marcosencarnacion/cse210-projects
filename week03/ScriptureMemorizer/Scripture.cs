@@ -45,8 +45,16 @@ public class Scripture
     // Method to get the scripture display text
     public string GetDisplayText()
     {
+        string displayText = $"{_reference.GetDisplayText()} "; // Get the reference text (e.g. 1 Nephi 3:7)
 
+        foreach (var word in _scripture)
+        {
+            displayText += word.GetDisplayText() + " "; // Add the display text of each word
+        }
+
+        return displayText.Trim(); // Remove the trailing space
     }
+
 
     // Method to check if all words are hidden
     public bool IsCompletelyHidden()
