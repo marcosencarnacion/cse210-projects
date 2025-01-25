@@ -44,7 +44,7 @@ class Program
         // Hide words until all are hidden
         while (!randomScripture.IsCompletelyHidden())
         {
-            Console.WriteLine("Please enter to continue or type 'quit' to finish:");
+            Console.WriteLine("Please press Enter to continue or type 'quit' to finish.");
             string input = Console.ReadLine();
 
             if (input.ToLower() == "quit")
@@ -61,6 +61,11 @@ class Program
                 Console.WriteLine("Scripture: ");
                 Console.WriteLine(randomScripture.GetDisplayText());
                 Console.WriteLine();
+            }
+            else
+            {
+                // Display an error message for invalid input
+                Console.Write("Invalid input. ");
             }
         }
 
