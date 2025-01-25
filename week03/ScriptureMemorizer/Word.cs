@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 
 public class Word
 {
@@ -12,4 +13,37 @@ public class Word
         _text = text;       // Assigns the text of the word to the private attribute.
         _isHidden = false;  // By default, the word is set to be visible when created.
     }
+
+
+    // Method to hide the word
+    public void HideWord()
+    {
+        _isHidden = true;
+    }
+
+    // Method to show the word
+    public void ShowWord()
+    {
+        _isHidden = false;
+    }
+
+    // Method to check if word is hidden
+    public bool IsHidden()
+    {
+        return _isHidden;
+    }
+
+    // Method to get the display text of the word
+    public string GetDisplayText()
+    {
+        if (_isHidden)
+        {
+            return new string('_', _text.Length); // Replace letters with underscores
+        }
+        else
+        {
+            return _text; // Return the actual word text
+        }
+    }
+
 }
