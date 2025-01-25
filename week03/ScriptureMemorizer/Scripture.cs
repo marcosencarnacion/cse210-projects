@@ -27,15 +27,39 @@ public class Scripture
         // Continue the loop until we hide the specified number of words
         while (wordsHidden < numberToHide)
         {
-            // Pick a random index within the list of words
-            int index = random.Next(_scripture.Count); // Random index between 0 and the number of words
 
-            // Check if the word is already hidden
-            if (!_scripture[index].IsHidden())
+            // Check if there are any words left to hide
+            int nonHiddenWordsCount = _scripture.Count(word => !word.IsHidden());
+
+            if (nonHiddenWordsCount == 0)
             {
-                _scripture[index].HideWord(); // Call the method on the Word object
-                wordsHidden++;                // Increment the number of words hidden
+                break; // If no words are left to hide, break out of the loop
             }
+
+            // If there are less than the number of words to hide left, adjust numberToHide
+            int wordsToHide = Math.Min(numberToHide - wordsHidden, nonHiddenWordsCount);
+
+            // Hide the remaining words
+            for (int i = 0; i < wordsToHide; i++)
+            {
+                // Pick a random index within the list of words
+                int index = random.Next(_scripture.Count); // Random index between 0 and the number of words
+
+                // Check if the word is already hidden
+                if (!_scripture[index].IsHidden())
+                {
+                    _scripture[index].HideWord(); // Call the method on the Word object
+                    wordsHidden++;                // Increment the number of words hidden
+                }
+            }
+
+            // The loop exits if no more words are available to hide
+            if (wordsHidden == nonHiddenWordsCount)
+            {
+                break; // Exit if all words are hidden
+            }
+
+
         }
 
     }

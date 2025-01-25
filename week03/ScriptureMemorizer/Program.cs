@@ -28,7 +28,7 @@ class Program
             else if (input == "")
             {
                 // Hide 3 random words
-                scripture.HideRandomWords(1);
+                scripture.HideRandomWords(3);
 
                 // Clear the console and display the updated scripture
                 Console.Clear();
