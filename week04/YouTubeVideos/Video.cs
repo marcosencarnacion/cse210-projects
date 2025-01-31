@@ -15,7 +15,7 @@ public class Video
         _title = title;
         _author = author;
         _length = length;
-        _comments = new List<Comment>();
+        _comments = new List<Comment>(); // Initializes an empty list for comments
     }
 
     // Behavior: Adds a comment to the video.
