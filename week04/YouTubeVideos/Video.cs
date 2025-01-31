@@ -53,5 +53,21 @@ public class Video
         }
         return output;
     }
+
+    // Additional properties to display video information
+    public string Title
+    {
+        get { return _title; }
+    }
+
+    public string Author
+    {
+        get { return _author; }
+    }
+
+    public int Length
+    {
+        get { return _length; }
+    }
 }
 
