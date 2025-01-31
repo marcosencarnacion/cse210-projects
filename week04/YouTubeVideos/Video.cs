@@ -18,7 +18,7 @@ public class Video
         _comments = new List<Comment>(); // Initializes an empty list for comments
     }
 
-    // Behavior: Adds a comment to the video.
+    // Behavior: Add a comment to the video.
     public void AddComment(Comment comment)
     {
         _comments.Add(comment);
@@ -49,7 +49,9 @@ public class Video
         {
             output += $"Commenter: {comment.CommenterName}\n";
             output += $"Comment: {comment.CommentText}\n";
+            output += "---------------------\n";
         }
+        return output;
     }
 }
 
