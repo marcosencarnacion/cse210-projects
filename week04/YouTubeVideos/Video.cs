@@ -14,7 +14,7 @@ public class Video
     {
         _title = title;
         _author = author;
-        _length = length;
+        _length = length; // In seconds
         _comments = new List<Comment>(); // Initializes an empty list for comments
     }
 
