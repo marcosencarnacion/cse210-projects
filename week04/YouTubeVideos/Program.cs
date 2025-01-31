@@ -24,12 +24,14 @@ public class Program
         video2.AddComment(new Comment("Stephanie", "You helped me understand OOP in minutes more than my professors did in hours of lecture. Thank you!!"));
         videos.Add(video2);
 
+        // Create third video and add comments.
         Video video3 = new Video("C# classes 📦", "Bro Code", 300);
         video3.AddComment(new Comment("Zoe", "You are a legend, I'm studying it and my teachers explain it as if im already experienced. This is a huge help"));
         video3.AddComment(new Comment("Regie", "Very good clear and succinct presentation. Thanks."));
         video3.AddComment(new Comment("Alex", "Good job you are always explaining very clearly 👏"));
         video3.AddComment(new Comment("Sreenivas", "Awesome explanation ❤ Thank you"));
 
+        // Create fourth video and add comments.
         Video video4 = new Video("Introduction to Classes and Objects", "YK Sugi", 1200);
         video4.AddComment(new Comment("Jonah", "The constructor explanation is gold!"));
         video4.AddComment(new Comment("Clane", "My whole programming for the semester taught powerfully in a very small amount of time in under 20mins. Deserve more subs."));
