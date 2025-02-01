@@ -16,5 +16,12 @@ public class Product
         _price = price;
         _quantity = quantity;
     }
+
+    // Public properties (getters only, no setters to protect encasuplation)
+    public string Name => _name;
+    public int ProductId => _productId;
+    public double Price => _price;
+    public int Quantity => _quantity;
+
     
 }
