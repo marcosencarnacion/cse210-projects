@@ -36,7 +36,7 @@ public class Order
         }
 
         // Determine the shipping cost
-        double shippingCost = _customer.IsInUSA ? 5m : 35m;
+        double shippingCost = _customer.IsInUSA() ? 5.0 : 35.0;
         return total + shippingCost;
     }
 
