@@ -28,4 +28,10 @@ public class Address
     {
         return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
     }
+
+    // Method to return the full address as a formatted string
+    public string GetFullAddress()
+    {
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
+    }
 }
