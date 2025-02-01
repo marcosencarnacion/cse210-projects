@@ -16,4 +16,10 @@ public class Address
         _stateOrProvince = stateOrProvince;
         _country = country;
     }
+
+    // Public properties for access (getters only, no setters to protect encasulaption)
+    public string StreetAddress => _streetAddress;
+    public string City => _city;
+    public string StateOrProvince => _stateOrProvince;
+    public string Country => _country;
 }
