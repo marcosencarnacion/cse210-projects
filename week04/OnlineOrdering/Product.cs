@@ -23,5 +23,9 @@ public class Product
     public double Price => _price;
     public int Quantity => _quantity;
 
-    
+    // Method to calculate the total cost of this product
+    public double TotalCost()
+    {
+        return _price * _quantity;
+    }
 }
