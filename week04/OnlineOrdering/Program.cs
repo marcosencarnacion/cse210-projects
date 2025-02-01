@@ -15,7 +15,8 @@ class Program
         Customer customer3 = new Customer("Olivia Martinez", address3);
 
         // Sample products created
-        Product product1 = new Product("Laptop", 101, 999.99, 2);
-        Product product2 = new Product("Smartphone", 102, 499.99, 1)
+        Product product1 = new Product("Laptop", "LAP123456", 999.99, 2);
+        Product product2 = new Product("Smartphone", "PHN654321", 499.99, 1);
+        Product product3 = new Product("Headphones", "HDP789012", 109.99, 3);
     }
 }
