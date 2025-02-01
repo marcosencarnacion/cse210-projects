@@ -21,5 +21,21 @@ class Program
         Product product4 = new Product("Tablet", "TAB234567", 299.99, 4);
         Product product5 = new Product("Smartwatch", "SWT345678", 199.99, 5);
         Product product6 = new Product("Bluetooth Speaker", "BSP456789", 149.99, 6);
+
+        // Create orders and add products
+        Order order1 = new Order(customer1);
+        order1.AddProduct(product1);
+        order1.AddProduct(product2);
+        order1.AddProduct(product5);
+
+        Order order2 = new Order(customer2);
+        order2.AddProduct(product6);
+        order2.AddProduct(product4);
+
+        Order order3 = new Order(customer3);
+        order3.AddProduct(product3);
+        order3.AddProduct(product1);
+        order3.AddProduct(product4);
+        order3.AddProduct(product2);
     }
 }
