@@ -44,6 +44,16 @@ class Program
         Console.WriteLine(order1.GetShippingLabel());
         Console.WriteLine($"Total Price: ${order1.CalculateTotalPrice():F2}\n");
 
-        
+        // Display order details for Order 2
+        Console.WriteLine("Order 2:");
+        Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine(order2.GetShippingLabel());
+        Console.WriteLine($"Total Price: ${order2.CalculateTotalPrice():F2}\n");
+
+        // Display order details for Order 3
+        Console.WriteLine("Order 2:");
+        Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine(order2.GetShippingLabel());
+        Console.WriteLine($"Total Price: ${order2.CalculateTotalPrice():F2}\n");
     }
 }
