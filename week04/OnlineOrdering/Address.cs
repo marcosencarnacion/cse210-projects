@@ -22,4 +22,10 @@ public class Address
     public string City => _city;
     public string StateOrProvince => _stateOrProvince;
     public string Country => _country;
+
+    // Method to check if the address is in the USA
+    public bool IsInUSA()
+    {
+        return _country.Equals("USA", StringComparison.OrdinalIgnoreCase);
+    }
 }
