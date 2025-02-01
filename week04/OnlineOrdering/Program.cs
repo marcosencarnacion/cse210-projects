@@ -37,5 +37,13 @@ class Program
         order3.AddProduct(product1);
         order3.AddProduct(product4);
         order3.AddProduct(product2);
+
+        // Display order details for Order 1
+        Console.WriteLine("Order 1:");
+        Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine(order1.GetShippingLabel());
+        Console.WriteLine($"Total Price: ${order1.CalculateTotalPrice():F2}\n");
+
+        
     }
 }
