@@ -51,5 +51,9 @@ public class Order
         return label;
     }
 
-
+    // Method to generate shipping label
+    public string GetShippingLabel()
+    {
+        return $"Shipping Label: \n{_customer.Name}\n{_customer.Address.GetFullAddress()}";
+    }
 }
