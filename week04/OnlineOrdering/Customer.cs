@@ -14,5 +14,12 @@ public class Customer
         _address = address;
     }
 
+    // Public property for accessing the customer's name (read-only)
+    public string Name => _name;
+
+    // Public property for accessing the customer's address (read-only)
+    public Address Address => _address;
+
     
+
 }
