@@ -40,5 +40,16 @@ public class Order
         return total + shippingCost;
     }
 
+    // Method to generate packing label
+    public string GetPackingLabel()
+    {
+        string label = "Packing Label: \n";
+        foreach (Product product in _products)
+        {
+            label += $"{product.Name} (ID: {product.ProductId})\n";
+        }
+        return label;
+    }
+
 
 }
