@@ -35,7 +35,10 @@ public class Order
             total += product.TotalCost(); // Calls TotalCos() method of Product
         }
 
-        
+        // Determine the shipping cost
+        double shippingCost = _customer.IsInUSA ? 5m : 35m;
+        return total + shippingCost;
     }
+
 
 }
