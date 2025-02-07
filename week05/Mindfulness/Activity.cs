@@ -47,7 +47,7 @@ public class Activity
         while (DateTime.Now < endTime)
         {
             string s = animationStrings[i];
-            Console.WriteLine(s);
+            Console.Write(s);
             Thread.Sleep(200);
             Console.WriteLine("\b \b");
 
