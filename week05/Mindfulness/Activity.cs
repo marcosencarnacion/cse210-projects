@@ -49,11 +49,11 @@ public class Activity
             string s = animationStrings[i];
             Console.Write(s);
             Thread.Sleep(200);
-            Console.WriteLine("\b \b");
+            Console.Write("\b \b");
 
             i++;
 
-            if (i > animationStrings.Count)
+            if (i >= animationStrings.Count)
             {
                 i = 0;
             }
