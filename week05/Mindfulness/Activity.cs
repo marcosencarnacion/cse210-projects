@@ -13,9 +13,30 @@ public class Activity
         _duration = duration;
     }
 
-    public void DisplayStartingMessage(string startingMessage, string activityPurpose)
+    public void DisplayStartingMessage(string startingMessage, string activityDescription)
     {
         Console.WriteLine(startingMessage);
-        Console.WriteLine(activityPurpose);
+        Console.WriteLine(activityDescription);
+        Console.Write("How long, in seconds, would you like for your session? ");
+        Console.ReadLine();
+    }
+
+    public void DisplayEndingMessage(string endingMessage)
+    {
+        Console.WriteLine("Well done!");
+        Console.WriteLine(endingMessage);
+    }
+
+    public void ShowSpinner(int seconds)
+    {
+        List<string> animationStrings = new List<string>();
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
+        animationStrings.Add("|");
+        animationStrings.Add("/");
+        animationStrings.Add("-");
+        animationStrings.Add("\\");
     }
 }
