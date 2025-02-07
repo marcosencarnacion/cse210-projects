@@ -38,5 +38,18 @@ public class Activity
         animationStrings.Add("/");
         animationStrings.Add("-");
         animationStrings.Add("\\");
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(5);
+
+        int i = 0;
+
+        while (DateTime.Now < endTime)
+        {
+            string s = animationStrings[i];
+            Console.WriteLine(s);
+            Thread.Sleep(200);
+            Console.WriteLine("\b \b");
+        }
     }
 }
