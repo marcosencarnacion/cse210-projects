@@ -12,4 +12,10 @@ public class Activity
         _description = description;
         _duration = duration;
     }
+
+    public void DisplayStartingMessage(string startingMessage, string activityPurpose)
+    {
+        Console.WriteLine(startingMessage);
+        Console.WriteLine(activityPurpose);
+    }
 }
