@@ -59,4 +59,14 @@ public class Activity
             }
         }
     }
+    public void ShowCountDown(int seconds)
+    {
+        for (int i = 5; i > 0; i--)
+        {
+            Console.Write("\r  ");
+            Console.Write("\r" + i);
+            Thread.Sleep(1000);
+            Console.Write("\r  \r");
+        }
+    }
 }
