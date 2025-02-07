@@ -50,6 +50,13 @@ public class Activity
             Console.WriteLine(s);
             Thread.Sleep(200);
             Console.WriteLine("\b \b");
+
+            i++;
+
+            if (i > animationStrings.Count)
+            {
+                i = 0;
+            }
         }
     }
 }
