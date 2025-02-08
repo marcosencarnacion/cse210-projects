@@ -79,8 +79,9 @@ public class ReflectingActivity : Activity
             Console.WriteLine();
         }
 
-
-
+        Console.WriteLine();
+        DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Reflecting Activity.");
+        ShowSpinner(5);
 
 
 
