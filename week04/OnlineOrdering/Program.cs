@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Instances Created: See Resources at the bottom of this program.
+        // Instances Created: See Sources at the bottom of this program.
 
         // Products
         Product product1 = new Product("Logitech USB Computer Headset H390", "981-000014", 24.99, 1);
@@ -13,8 +13,6 @@ class Program
         Product product4 = new Product("Motorola Moto G Stylus 5G", "XT2131", 148.49, 1);
         Product product5 = new Product("Apple iPad Pro (M4)", "A2837", 1199, 1);
         Product product6 = new Product("YSSOA Gaming Chair", "FNCHARGAME01BRFRV15", 124, 1);
-
-        // Add 
 
         // Addresses
         Address address1 = new Address("3400 Ashton Blvd Ste 220", "Lehi", "Utah", "USA");
@@ -76,6 +74,7 @@ class Program
 
 // Address information
 // https://www.bestrandoms.com/random-address-in-ca?quantity=6
+// https://www.graphiteconnect.com/
 
 // Customer Names
 // These are my family names :)
