@@ -37,5 +37,22 @@ public class ListingActivity : Activity
         Console.WriteLine("You may begin in...");
         ShowCountDown(5);
 
+        Console.WriteLine($"Please start listing for the next {sessionDuration} seconds.");
+
+        DateTime endTime = DateTime.Now.AddSeconds(sessionDuration);
+        List<string> responses = new List<string>();
+
+        while (DateTime.Now < endTime)
+        {
+            string response = Console.ReadLine();
+            if (!string.IsNullOrEmpty(response))
+            {
+                responses.Add(response);
+                _count++;
+            }
+        }
+
+        Console.WriteLine($"You listed {_count} items!");
+        DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Listing Activity.");
     }
 }
