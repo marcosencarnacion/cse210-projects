@@ -26,10 +26,16 @@ public class ListingActivity : Activity
         int sessionDuration = int.Parse(Console.ReadLine());
         _duration = sessionDuration;
 
+        Console.WriteLine("Get Ready...");
+        ShowSpinner(5);
+
         Random random = new Random();
         int index = random.Next(_prompts.Count);
         Console.WriteLine("List as many responses you can to the following prompt:");
         Console.WriteLine($"--- {_prompts[index]} ---");
+
+        Console.WriteLine("You may begin in...");
+        ShowCountDown(5);
 
     }
 }
