@@ -19,6 +19,12 @@ public class ListingActivity : Activity
         };
     }
 
+    public string GetRandomPrompt()
+    {
+        Random random = new Random();
+        return _prompts[random.Next(_prompts.Count)];
+    }
+
     public void Run()
     {
         DisplayStartingMessage("Welcome to the Listing Activity", "This activity will help you reflect on the good things in your life by having you list as many things as you can in a certain area.");
@@ -29,18 +35,17 @@ public class ListingActivity : Activity
         Console.WriteLine("Get Ready...");
         ShowSpinner(5);
 
-        Random random = new Random();
-        int index = random.Next(_prompts.Count);
+        string prompt = GetRandomPrompt();
         Console.WriteLine("List as many responses you can to the following prompt:");
-        Console.WriteLine($"--- {_prompts[index]} ---");
+        Console.WriteLine($"--- {prompt} ---");
 
         Console.WriteLine("You may begin in...");
         ShowCountDown(5);
 
         Console.WriteLine($"Please start listing for the next {sessionDuration} seconds.");
 
-        DateTime endTime = DateTime.Now.AddSeconds(sessionDuration);
         List<string> responses = new List<string>();
+        DateTime endTime = DateTime.Now.AddSeconds(sessionDuration);
 
         while (DateTime.Now < endTime)
         {
@@ -54,5 +59,6 @@ public class ListingActivity : Activity
 
         Console.WriteLine($"You listed {_count} items!");
         DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Listing Activity.");
+
     }
 }

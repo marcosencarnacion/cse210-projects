@@ -11,19 +11,24 @@ public class BreathingActivity : Activity
         DisplayStartingMessage("Welcome to the Breathing Activity.", "This activity will help you relax by walking you through breathing in and out slowly. Clear your mind and focus on your breathing.");
 
         int sessionDuration = int.Parse(Console.ReadLine());
-
         _duration = sessionDuration;
+
+        Console.Clear();
+
+        Console.WriteLine("Get Ready...");
+        ShowSpinner(5);
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(sessionDuration);
 
         while (DateTime.Now < endTime)
         {
-            Console.WriteLine("Breathe in...");
+            Console.Write("Breathe in...");
             ShowCountDown(5);
 
-            Console.WriteLine("Breathe out...");
+            Console.Write("Breathe out...");
             ShowCountDown(5);
+            Console.WriteLine();
         }
 
         DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Breathing Activity.");

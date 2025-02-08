@@ -4,7 +4,30 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the Mindfulness Project.");
+        Console.WriteLine("Menu Options: ");
+        Console.WriteLine("1. Breathing Activity");
+        Console.WriteLine("2. Listing Activity");
+        Console.Write("Select a choice from the menu: ");
+
+        string choice = Console.ReadLine();
+        Console.Clear();
+
+        if (choice == "1")
+        {
+            BreathingActivity breathingActivity = new BreathingActivity();
+            breathingActivity.Run();
+        }
+        else if (choice == "3")
+        {
+            ListingActivity listingActivity = new ListingActivity();
+            listingActivity.Run();
+        }
+        else
+        {
+            Console.WriteLine("Invalid choice. Exiting...");
+        }
+
+
     }
 
 }

@@ -16,9 +16,10 @@ public class Activity
     public void DisplayStartingMessage(string startingMessage, string activityDescription)
     {
         Console.WriteLine(startingMessage);
+        Console.WriteLine();
         Console.WriteLine(activityDescription);
+        Console.WriteLine();
         Console.Write("How long, in seconds, would you like for your session? ");
-        Console.ReadLine();
     }
 
     public void DisplayEndingMessage(string endingMessage)
@@ -48,7 +49,7 @@ public class Activity
         {
             string s = animationStrings[i];
             Console.Write(s);
-            Thread.Sleep(200);
+            Thread.Sleep(300);
             Console.Write("\b \b");
 
             i++;
@@ -63,10 +64,10 @@ public class Activity
     {
         for (int i = seconds; i > 0; i--)
         {
-            Console.Write("\r  ");
-            Console.Write("\r" + i);
+            Console.Write(i);
             Thread.Sleep(1000);
-            Console.Write("\r  \r");
+            Console.Write("\b \b");
         }
+        Console.WriteLine();
     }
 }
