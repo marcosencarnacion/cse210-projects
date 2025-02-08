@@ -36,12 +36,17 @@ public class Order
     }
 
     public string GetPackingLabel()
-    {  
+    {
         string packingLabel = "Packing Label:\n";
+        foreach (var product in _products)
+        {
+            packingLabel += $"{product.GetName()} (ID: {product.GetProductId()})";
+        }
+        return packingLabel;
     }
 
     public string GetShippingLabel()
     {
-        
+
     }
 }
