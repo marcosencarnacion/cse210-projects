@@ -5,8 +5,8 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Menu Options: ");
-        Console.WriteLine("1. Breathing Activity");
-        Console.WriteLine("2. Listing Activity");
+        Console.WriteLine(" 1. Breathing Activity");
+        Console.WriteLine(" 2. Listing Activity");
         Console.Write("Select a choice from the menu: ");
 
         string choice = Console.ReadLine();
