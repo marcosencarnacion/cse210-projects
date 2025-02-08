@@ -29,14 +29,29 @@ public class ReflectingActivity : Activity
         };
     }
 
+    public string GetRandomPrompt()
+    {
+        Random random = new Random();
+        return _prompts[random.Next(_prompts.Count)];
+    }
+
+    public string GetRandomQuestion()
+    {
+        Random random = new Random();
+        return _questions[random.Next(_questions.Count)];
+    }
+
+
     public void Run()
     {
-        DisplayStartingMessage("Welcome to the Reflecting Activity", "This activity will help you reflect on times in your life when you have shown strenght and resilience. This will help you recognize the power you have and how you an use it in other aspects of your life");
+        DisplayStartingMessage("Welcome to the Reflecting Activity", "This activity will help you reflect on times in your life when you have shown strenght and resilience. This will help you recognize the power you have and how you can use it in other aspects of your life.");
 
         int sessionDuration = int.Parse(Console.ReadLine());
         _duration = sessionDuration;
 
         Console.Clear();
+        Console.WriteLine("Get Ready...");
+        ShowSpinner(5);
 
     }
 
