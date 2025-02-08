@@ -17,6 +17,7 @@ public class BreathingActivity : Activity
 
         Console.WriteLine("Get Ready...");
         ShowSpinner(5);
+        Console.WriteLine();
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(sessionDuration);
@@ -24,14 +25,15 @@ public class BreathingActivity : Activity
         while (DateTime.Now < endTime)
         {
             Console.Write("Breathe in...");
-            ShowCountDown(5);
+            ShowCountDown(4);
 
             Console.Write("Breathe out...");
-            ShowCountDown(5);
+            ShowCountDown(6);
             Console.WriteLine();
         }
 
         DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Breathing Activity.");
+        ShowSpinner(5);
 
     }
 

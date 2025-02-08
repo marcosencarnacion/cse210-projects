@@ -25,6 +25,8 @@ public class Activity
     public void DisplayEndingMessage(string endingMessage)
     {
         Console.WriteLine("Well done!");
+        Console.WriteLine();
+        ShowSpinner(5);
         Console.WriteLine(endingMessage);
     }
 
