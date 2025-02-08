@@ -65,21 +65,23 @@ public class ReflectingActivity : Activity
         ShowCountDown(5);
         Console.Clear();
 
-
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(sessionDuration);
-
-
+        int questionCount = 0;
 
         while (DateTime.Now < endTime)
         {
             string question = GetRandomQuestion();
             Console.Write($"{question} ");
-            ShowSpinner(5);
+
+            ShowSpinner(8);
             Console.WriteLine();
+
+            questionCount++;
         }
 
         Console.WriteLine();
+        Console.WriteLine($"You have been asked {questionCount} questions!");
         DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Reflecting Activity.");
         ShowSpinner(5);
 
