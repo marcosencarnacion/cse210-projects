@@ -17,7 +17,7 @@ public class Address
 
     public string GetAddress()
     {
-
+        return $"{_streetAddress} {_city} {_stateOrProvince}, {_country}";
     }
 
     public bool IsInUSA()
