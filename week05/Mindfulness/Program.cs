@@ -17,7 +17,7 @@ class Program
             BreathingActivity breathingActivity = new BreathingActivity();
             breathingActivity.Run();
         }
-        else if (choice == "3")
+        else if (choice == "2")
         {
             ListingActivity listingActivity = new ListingActivity();
             listingActivity.Run();
