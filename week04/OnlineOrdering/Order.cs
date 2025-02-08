@@ -36,12 +36,12 @@ public class Order
     }
 
     public string GetPackingLabel()
-    {
-
+    {  
+        string packingLabel = "Packing Label:\n";
     }
 
     public string GetShippingLabel()
     {
-
+        
     }
 }
