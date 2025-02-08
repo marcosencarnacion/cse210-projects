@@ -41,6 +41,7 @@ class Program
             {
                 Console.WriteLine("Thank you so much for participating in this activity!");
                 Console.WriteLine();
+                break;
             }
             else
             {
