@@ -13,7 +13,7 @@ public class ListingActivity : Activity
         {
             "Who are people that you appreciate?",
             "What are personal strengths of yours",
-            "Who are people that you have hlped this week?",
+            "Who are people that you have helped this week?",
             "When have you felt the Holy Ghost this month?",
             "Who are some of your personal heroes?"
         };
@@ -39,7 +39,7 @@ public class ListingActivity : Activity
         Console.WriteLine("List as many responses you can to the following prompt:");
         Console.WriteLine($"--- {prompt} ---");
 
-        Console.Write("You may begin in...");
+        Console.Write("You may begin in: ");
         ShowCountDown(5);
 
         Console.WriteLine($"Please start listing for the next {sessionDuration} seconds.");
@@ -59,6 +59,7 @@ public class ListingActivity : Activity
 
         Console.WriteLine($"You listed {_count} items!");
         DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Listing Activity.");
+        ShowSpinner(5);
 
     }
 }
