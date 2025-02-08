@@ -22,6 +22,11 @@ class Program
             ListingActivity listingActivity = new ListingActivity();
             listingActivity.Run();
         }
+        else if (choice == "3")
+        {
+            ReflectingActivity reflectingActivity = new ReflectingActivity();
+            reflectingActivity.Run();
+        }
         else
         {
             Console.WriteLine("Invalid choice. Exiting...");
