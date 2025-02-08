@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 public class Order
 {
@@ -30,7 +31,7 @@ public class Order
         }
         double totalCost = 0;
 
-        foreach (var product in _products)
+        foreach (Product product in _products)
         {
             totalCost += product.GetTotalCost();
         }
@@ -43,9 +44,9 @@ public class Order
     public string GetPackingLabel()
     {
         string packingLabel = "Packing Label:\n";
-        foreach (var product in _products)
+        foreach (Product product in _products)
         {
-            packingLabel += $"{product.GetName()} (ID: {product.GetProductId()})";
+            packingLabel += $"{product.GetName()} (ID: {product.GetProductId()})\n";
         }
         return packingLabel;
     }

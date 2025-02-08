@@ -24,7 +24,7 @@ class Program
         // Customers
         Customer customer1 = new Customer("Ingrid Mayorga", address1);
         Customer customer2 = new Customer("Dylan Encarnacion", address2);
-        Customer custoemr3 = new Customer("Ian Encarnacion", address3);
+        Customer customer3 = new Customer("Ian Encarnacion", address3);
 
         // Create orders and add products
         Order order1 = new Order(customer1);
@@ -36,11 +36,17 @@ class Program
         order2.AddProduct(product6);
         order2.AddProduct(product1);
 
-        Order order3 = new Order(custoemr3);
+        Order order3 = new Order(customer3);
         order3.AddProduct(product2);
         order3.AddProduct(product5);
         order3.AddProduct(product6);
 
+        // Show order details for Order No. 1
+        Console.WriteLine("--- Order No. 1 ---");
+        Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine(order1.GetShippingLabel());
+        Console.WriteLine($"Total Price: ${order1.CalculateTotalCost()}");
+        Console.WriteLine();
 
 
 
