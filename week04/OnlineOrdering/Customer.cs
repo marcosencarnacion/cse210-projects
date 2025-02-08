@@ -11,4 +11,9 @@ public class Customer
         _name = name;
         _address = address;
     }
+
+    public bool IsInUSA()
+    {
+        return _address.IsInUSA();
+    }
 }
