@@ -13,6 +13,20 @@ public class BreathingActivity : Activity
         int sessionDuration = int.Parse(Console.ReadLine());
 
         _duration = sessionDuration;
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(sessionDuration);
+
+        while (DateTime.Now < endTime)
+        {
+            Console.WriteLine("Breathe in...");
+            ShowCountDown(5);
+
+            Console.WriteLine("Breathe out...");
+            ShowCountDown(5);
+        }
+
+        
     }
 
 
