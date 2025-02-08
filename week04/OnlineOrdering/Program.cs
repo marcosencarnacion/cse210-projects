@@ -6,7 +6,7 @@ class Program
     {
         // Instances Created: See Resources at the bottom of this program.
 
-        // Product
+        // Products
         Product product1 = new Product("Logitech USB Computer Headset H390", "981-000014", 24.99, 1);
         Product product2 = new Product("Lenovo ThinkPad E16 G2", "21MA003NSC", 1279, 1);
         Product product3 = new Product("Samsung Galaxy S25", "SM-S251", 859.99, 1);
@@ -14,12 +14,14 @@ class Program
         Product product5 = new Product("Apple iPad Pro (M4)", "A2837", 1199, 1);
         Product product6 = new Product("YSSOA Gaming Chair", "FNCHARGAME01BRFRV15", 124, 1);
 
-        // Address
+        // Add 
+
+        // Addresses
         Address address1 = new Address("3400 Ashton Blvd Ste 220", "Lehi", "Utah", "USA");
         Address address2 = new Address("4933 Simons Hollow Road", "Lawrenceville", "Pennsylvania", "USA");
         Address address3 = new Address("3309 rue Saint-Antoine", "Rromont", "Quebec", "CANADA");
 
-        // Customer
+        // Customers
         Customer customer1 = new Customer("Ingrid Mayorga", address1);
         Customer customer2 = new Customer("Dylan Encarnacion", address2);
         Customer custoemr3 = new Customer("Ian Encarnacion", address3);
@@ -28,6 +30,9 @@ class Program
         Order order1 = new Order(customer1);
         Order order2 = new Order(customer2);
         Order order3 = new Order(custoemr3);
+
+        // Add products to the orders.
+        order1.AddProduct(product1);
 
     }
 }

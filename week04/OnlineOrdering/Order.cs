@@ -11,6 +11,11 @@ public class Order
         _customer = customer;
     }
 
+    public void AddProduct(Product product)
+    {
+        _products.Add(product);
+    }
+
     public double CalculateTotalCost()
     {
         double shippingCost;
