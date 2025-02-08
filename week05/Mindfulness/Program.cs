@@ -32,6 +32,7 @@ class Program
         else if (choice == "4")
         {
             Console.WriteLine("Thank you so much for participating in this activity!");
+            Console.WriteLine();
         }
         else
         {
