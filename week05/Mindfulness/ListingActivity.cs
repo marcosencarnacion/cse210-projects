@@ -32,6 +32,7 @@ public class ListingActivity : Activity
         int sessionDuration = int.Parse(Console.ReadLine());
         _duration = sessionDuration;
 
+        Console.Clear();
         Console.WriteLine("Get Ready...");
         ShowSpinner(5);
 
