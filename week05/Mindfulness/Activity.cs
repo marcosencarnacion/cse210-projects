@@ -2,9 +2,9 @@ using System;
 
 public class Activity
 {
-    private string _name;
-    private string _description;
-    private int _duration;
+    protected string _name;
+    protected string _description;
+    protected int _duration;
 
     public Activity(string name, string description, int duration)
     {
@@ -40,7 +40,7 @@ public class Activity
         animationStrings.Add("\\");
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = startTime.AddSeconds(5);
+        DateTime endTime = startTime.AddSeconds(seconds);
 
         int i = 0;
 
@@ -61,7 +61,7 @@ public class Activity
     }
     public void ShowCountDown(int seconds)
     {
-        for (int i = 5; i > 0; i--)
+        for (int i = seconds; i > 0; i--)
         {
             Console.Write("\r  ");
             Console.Write("\r" + i);
