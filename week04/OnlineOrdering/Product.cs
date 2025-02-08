@@ -15,4 +15,11 @@ public class Product
         _productQuantity = productQuantity;
     }
 
+    public double GetTotalCost()
+    {
+        
+    }
+
+
+
 }
