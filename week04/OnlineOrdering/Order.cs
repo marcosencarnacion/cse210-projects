@@ -11,7 +11,17 @@ public class Order
         _customer = customer;
     }
 
-    public void CalculateTotalCost()
+    public double CalculateTotalCost()
+    {
+
+    }
+
+    public string GetPackingLabel()
+    {
+
+    }
+
+    public string GetShippingLabel()
     {
 
     }
