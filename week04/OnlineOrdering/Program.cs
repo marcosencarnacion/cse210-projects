@@ -26,13 +26,23 @@ class Program
         Customer customer2 = new Customer("Dylan Encarnacion", address2);
         Customer custoemr3 = new Customer("Ian Encarnacion", address3);
 
-        // Create orders
+        // Create orders and add products
         Order order1 = new Order(customer1);
-        Order order2 = new Order(customer2);
-        Order order3 = new Order(custoemr3);
-
-        // Add products to the orders.
         order1.AddProduct(product1);
+        order1.AddProduct(product3);
+
+        Order order2 = new Order(customer2);
+        order2.AddProduct(product4);
+        order2.AddProduct(product6);
+        order2.AddProduct(product1);
+
+        Order order3 = new Order(custoemr3);
+        order3.AddProduct(product2);
+        order3.AddProduct(product5);
+        order3.AddProduct(product6);
+
+
+
 
     }
 }
