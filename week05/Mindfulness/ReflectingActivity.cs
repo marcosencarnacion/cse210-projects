@@ -66,6 +66,23 @@ public class ReflectingActivity : Activity
         Console.Clear();
 
 
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(sessionDuration);
+
+
+
+        while (DateTime.Now < endTime)
+        {
+            string question = GetRandomQuestion();
+            Console.Write($"{question} ");
+            ShowSpinner(5);
+            Console.WriteLine();
+        }
+
+
+
+
+
 
     }
 

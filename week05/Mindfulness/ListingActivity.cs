@@ -46,7 +46,8 @@ public class ListingActivity : Activity
         Console.WriteLine($"Please start listing for the next {sessionDuration} seconds.");
 
         List<string> responses = new List<string>();
-        DateTime endTime = DateTime.Now.AddSeconds(sessionDuration);
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(sessionDuration);
 
         while (DateTime.Now < endTime)
         {
