@@ -26,7 +26,8 @@ public class BreathingActivity : Activity
             ShowCountDown(5);
         }
 
-        
+        DisplayEndingMessage($"You have completed another {sessionDuration} seconds of the Breathing Activity.");
+
     }
 
 
