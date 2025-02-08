@@ -14,4 +14,14 @@ public class Address
         _stateOrProvince = stateOrProvince;
         _country = country;
     }
+
+    public string GetAddress()
+    {
+
+    }
+
+    public bool IsInUSA()
+    {
+
+    }
 }
