@@ -39,7 +39,7 @@ public class ListingActivity : Activity
         Console.WriteLine("List as many responses you can to the following prompt:");
         Console.WriteLine($"--- {prompt} ---");
 
-        Console.WriteLine("You may begin in...");
+        Console.Write("You may begin in...");
         ShowCountDown(5);
 
         Console.WriteLine($"Please start listing for the next {sessionDuration} seconds.");
