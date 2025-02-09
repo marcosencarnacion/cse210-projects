@@ -20,6 +20,7 @@ public class Order
     public double CalculateTotalCost()
     {
         double shippingCost;
+        double totalCost = 0;
 
         if (_customer.IsInUSA())
         {
@@ -29,7 +30,7 @@ public class Order
         {
             shippingCost = 35;
         }
-        double totalCost = 0;
+
 
         foreach (Product product in _products)
         {
@@ -44,6 +45,7 @@ public class Order
     public string GetPackingLabel()
     {
         string packingLabel = "Packing Label:\n";
+
         foreach (Product product in _products)
         {
             packingLabel += $"{product.GetName()} (ID: {product.GetProductId()})\n";
