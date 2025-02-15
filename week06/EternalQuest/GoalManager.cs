@@ -24,7 +24,8 @@ public class GoalManager
             Console.WriteLine("  3. Save Goals");
             Console.WriteLine("  4. Load Goals");
             Console.WriteLine("  5. Record Event");
-            Console.WriteLine("  6. Quit");
+            Console.WriteLine("  6. Delete Goal");
+            Console.WriteLine("  7. Quit");
             Console.Write("Select a choice from the menu: ");
 
             string choice = Console.ReadLine();
@@ -48,13 +49,15 @@ public class GoalManager
                     RecordEvent();
                     break;
                 case "6":
+                    DeleteGoal();
+                    break;
+                case "7":
                     running = false;
                     Console.WriteLine("Thanks for playing! You have finished managing your goals today.");
                     break;
                 default:
                     Console.WriteLine("Invalid Entry. Please enter a number between 1 and 6.");
                     break;
-
             }
         }
     }
@@ -257,6 +260,32 @@ public class GoalManager
 
         }
         Console.WriteLine("Goals loaded successfully!");
+    }
+
+    public void DeleteGoal()
+    {
+        if (_goals.Count == 0)
+        {
+            Console.WriteLine("No goals available to delete.");
+            return;
+        }
+
+        Console.WriteLine("\nWhich goal would you like to delete?");
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
+        }
+
+        Console.Write("Please select the goal to delete: ");
+        if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= _goals.Count)
+        {
+            _goals.RemoveAt(choice - 1);
+            Console.WriteLine("Goal deleted successfully.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid Entry. Please select a valid goal number.");
+        }
     }
 
 }
