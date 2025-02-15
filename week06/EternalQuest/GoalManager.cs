@@ -78,7 +78,62 @@ public class GoalManager
         Console.WriteLine("  1. Simple Goal");
         Console.WriteLine("  2. Eternal Goal");
         Console.WriteLine("  3. Checklist Goal");
-        Console.Write("Which type of goal would you like to create?");
+        Console.Write("Which type of goal would you like to create? ");
+
+        string choice = Console.ReadLine();
+        Goal newGoal = null;
+
+        Console.Write("What is the name of your goal? ");
+        string name = Console.ReadLine();
+
+        Console.Write("What is a short description of it? ");
+        string description = Console.ReadLine();
+
+        int points;
+        Console.Write("What is the amount of points associated with this goal? ");
+        while (!int.TryParse(Console.ReadLine(), out points) || points < 0)
+        {
+            Console.Write("Invalid Entry. Please enter a positive number of points: ");
+        }
+
+        switch (choice)
+        {
+            case "1":
+                newGoal = new SimpleGoal(name, description, points);
+                break;
+            case "2":
+                newGoal = new EternalGoal(name, description, points);
+                break;
+            case "3":
+                int target;
+                Console.WriteLine("How many times does this goal need to be accomplihsed for a bonus? ");
+                while (!int.TryParse(Console.ReadLine(), out target) || target <= 0)
+                {
+                    Console.Write("Please enter a valid positive number for the target: ");
+                }
+
+                int bonus;
+                Console.WriteLine("What is the bonus for accomplishing it that many times? ");
+                while (!int.TryParse(Console.ReadLine(), out bonus) || bonus < 0)
+
+                {
+                    Console.WriteLine("Please enter a positive number for the bonus: ");
+                }
+
+                newGoal = new ChecklistGoal(name, description, points, target, bonus);
+                break;
+            default:
+                Console.WriteLine("Ivalid option. Please select 1, 2, or 3. ");
+                return;
+
+        }
+
+        _goals.Add(newGoal);
+        Console.WriteLine("Goal Created!");
+
+
+
+
     }
 
     public void RecordEvent()

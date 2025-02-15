@@ -1,6 +1,6 @@
 using System;
 
-public abstract class SimpleGoal : Goal
+public class SimpleGoal : Goal
 {
     private bool _isComplete;
 
