@@ -26,4 +26,9 @@ public class SimpleGoal : Goal
         string status = _isComplete ? "[X]" : "[ ]";
         return $"{status} {_shortName} ({_description})";
     }
+
+    public override string GetSaveString()
+    {
+        return $"SimpleGoal |{_shortName}|{_description}|{_points}|{_isComplete}";
+    }
 }

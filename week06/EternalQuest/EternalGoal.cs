@@ -17,4 +17,9 @@ public class EternalGoal : Goal
     {
         return $"[ ] {_shortName} ({_description})";
     }
+
+    public override string GetSaveString()
+    {
+        return $"EternalGoal |{_shortName}|{_description}|{_points}";
+    }
 }

@@ -81,10 +81,8 @@ public class GoalManager
         {
             Console.WriteLine(goal.GetStringRepresentation());
         }
-
-
-
     }
+
     public void CreateGoal()
     {
         Console.WriteLine("The types of Goals are:");
@@ -180,9 +178,7 @@ public class GoalManager
 
 
     }
-
-
-
+    
     public void SaveGoals()
     {
 
