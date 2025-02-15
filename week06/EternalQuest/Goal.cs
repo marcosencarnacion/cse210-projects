@@ -24,11 +24,16 @@ public abstract class Goal
 
     public abstract string GetStringRepresentation();
 
-    public int GetPoints()
+    public virtual int GetPoints()
     {
         return _points;
     }
 
     public abstract string GetSaveString();
+
+    public string GetShortName()
+    {
+        return _shortName;
+    }
 
 }

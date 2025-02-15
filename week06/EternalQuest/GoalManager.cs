@@ -17,7 +17,9 @@ public class GoalManager
         bool running = true;
         while (running)
         {
-            Console.WriteLine($"\nYou have {_score} points.");
+            Console.WriteLine();
+            DisplayPlayerInfo();
+
             Console.WriteLine("\nMenu Options:");
             Console.WriteLine("  1. Create New Goal");
             Console.WriteLine("  2. List Goals");
@@ -69,8 +71,19 @@ public class GoalManager
 
     public void ListGoalNames()
     {
+        if (_goals.Count == 0)
+        {
+            Console.WriteLine("No goals created yet.");
+            return;
+        }
 
+        Console.WriteLine("The goals are:");
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {_goals[i].GetShortName()}");
+        }
     }
+
     public void ListGoalDetails()
     {
         if (_goals.Count == 0)
@@ -159,19 +172,20 @@ public class GoalManager
 
     public void RecordEvent()
     {
-        Console.WriteLine("\nWhich goal did you accomplish?");
-
-        for (int i = 0; i < _goals.Count; i++)
+        if (_goals.Count == 0)
         {
-            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
+            Console.WriteLine("No goals avaiilable to record.");
+            return;
         }
+
+        Console.WriteLine("Which goal did you accomplish?");
+        ListGoalNames();
 
         Console.Write("Enter the number of the goal: ");
         if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= _goals.Count)
         {
             Goal selectedGoal = _goals[choice - 1];
             selectedGoal.RecordEvent();
-
             _score += selectedGoal.GetPoints();
         }
         else
@@ -271,10 +285,7 @@ public class GoalManager
         }
 
         Console.WriteLine("\nWhich goal would you like to delete?");
-        for (int i = 0; i < _goals.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
-        }
+        ListGoalNames();
 
         Console.Write("Please select the goal to delete: ");
         if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= _goals.Count)

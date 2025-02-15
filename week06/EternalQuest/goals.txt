@@ -1,5 +1,5 @@
-650
+850
 SimpleGoal|Give a talk|At Church|100|True
-SimpleGoal|Learn French|Learn a new language|200|True
-ChecklistGoal|Attend the temple|To do ordinancs|50|3|500|1
-EternalGoal|Serve my neighbor everyday|Serve someone daily|200
+EternalGoal|Study Scriptures|Study for 10 minutes|50
+ChecklistGoal|Attend the temple|Attend and perform ordinances|50|3|500|3
+ChecklistGoal|wake up early|wake up by 6:00a.m.|10|10|1000|0
