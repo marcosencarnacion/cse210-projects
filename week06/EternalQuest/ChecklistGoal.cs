@@ -15,21 +15,33 @@ public class ChecklistGoal : Goal
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _amountCompleted++;
+
+        if (IsComplete())
+        {
+            Console.WriteLine($"Congratulations! You have earned {_points + _bonus} points!");
+
+        }
+        else
+        {
+            Console.WriteLine($"Good Job! You made progress on {_shortName}. ({_amountCompleted}/{_target} Completed)");
+        }
+
     }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _amountCompleted >= _target;
     }
 
     public override string GetDetailsString()
     {
-        throw new NotImplementedException();
+        return $"{_shortName} ({_description} - Completed {_amountCompleted}/{_target})";
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        string status = IsComplete() ? "[X]" : "[ ]";
+        return $"{status} {_shortName} ({_description}) -- Completed {_amountCompleted}/{_target}";
     }
 }
