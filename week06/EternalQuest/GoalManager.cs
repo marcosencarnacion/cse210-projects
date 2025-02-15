@@ -17,7 +17,7 @@ public class GoalManager
         bool running = true;
         while (running)
         {
-            Console.WriteLine($"You have {_score} points.");
+            Console.WriteLine($"\nYou have {_score} points.");
             Console.WriteLine("\nMenu Options:");
             Console.WriteLine("  1. Create New Goal");
             Console.WriteLine("  2. List Goals");
@@ -80,9 +80,9 @@ public class GoalManager
         }
 
         Console.WriteLine("The goals are:");
-        foreach (Goal goal in _goals)
+        for (int i = 0; i < _goals.Count; i++)
         {
-            Console.WriteLine(goal.GetStringRepresentation());
+            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
         }
     }
 
