@@ -106,14 +106,14 @@ public class GoalManager
                 break;
             case "3":
                 int target;
-                Console.WriteLine("How many times does this goal need to be accomplihsed for a bonus? ");
+                Console.Write("How many times does this goal need to be accomplihsed for a bonus? ");
                 while (!int.TryParse(Console.ReadLine(), out target) || target <= 0)
                 {
                     Console.Write("Please enter a valid positive number for the target: ");
                 }
 
                 int bonus;
-                Console.WriteLine("What is the bonus for accomplishing it that many times? ");
+                Console.Write("What is the bonus for accomplishing it that many times? ");
                 while (!int.TryParse(Console.ReadLine(), out bonus) || bonus < 0)
 
                 {
