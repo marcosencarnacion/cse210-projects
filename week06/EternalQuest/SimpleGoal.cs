@@ -6,21 +6,24 @@ public class SimpleGoal : Goal
 
     public SimpleGoal(string shortName, string description, int points) : base(shortName, description, points)
     {
-
+        _isComplete = false;
     }
 
     public override void RecordEvent()
     {
-        throw new NotImplementedException();
+        _isComplete = true;
+        Console.WriteLine($"Congratulations! You completed {_shortName} and earned {_points} points!");
+        Console.WriteLine($"You now have {_points} points.");
     }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _isComplete;
     }
 
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        string status = _isComplete ? "[X]" : "[ ]";
+        return $"{status} {_shortName} ({_description})";
     }
 }

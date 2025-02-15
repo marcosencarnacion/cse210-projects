@@ -70,6 +70,19 @@ public class GoalManager
     }
     public void ListGoalDetails()
     {
+        if (_goals.Count == 0)
+        {
+            Console.WriteLine("No goals are created yet. ");
+            return;
+        }
+
+        Console.WriteLine("The goals are:");
+        foreach (Goal goal in _goals)
+        {
+            Console.WriteLine(goal.GetStringRepresentation());
+        }
+
+
 
     }
     public void CreateGoal()
