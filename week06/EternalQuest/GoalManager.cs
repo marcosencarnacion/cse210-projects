@@ -91,10 +91,20 @@ public class GoalManager
         Console.WriteLine("  1. Simple Goal");
         Console.WriteLine("  2. Eternal Goal");
         Console.WriteLine("  3. Checklist Goal");
-        Console.Write("Which type of goal would you like to create? ");
 
-        string choice = Console.ReadLine();
-        Goal newGoal = null;
+        string choice;
+        do
+        {
+            Console.Write("Which type of goal would you like to create? ");
+            choice = Console.ReadLine();
+
+            if (choice != "1" && choice != "2" && choice != "3")
+            {
+                Console.WriteLine("Invalid option. Please select 1, 2, or 3.");
+            }
+        }
+
+        while (choice != "1" && choice != "2" && choice != "3");
 
         Console.Write("What is the name of your goal? ");
         string name = Console.ReadLine();
@@ -109,6 +119,7 @@ public class GoalManager
             Console.Write("Invalid Entry. Please enter a positive number of points: ");
         }
 
+        Goal newGoal = null;
         switch (choice)
         {
             case "1":
@@ -143,10 +154,6 @@ public class GoalManager
 
         _goals.Add(newGoal);
         Console.WriteLine("Goal Created!");
-
-
-
-
     }
 
     public void RecordEvent()
@@ -158,7 +165,7 @@ public class GoalManager
             Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
         }
 
-        Console.WriteLine("Enter the number of the goal: ");
+        Console.Write("Enter the number of the goal: ");
         if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= _goals.Count)
         {
             Goal selectedGoal = _goals[choice - 1];

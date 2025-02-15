@@ -24,7 +24,7 @@ public class ChecklistGoal : Goal
         }
         else
         {
-            Console.WriteLine($"Good Job! You made progress on {_shortName}. ({_amountCompleted}/{_target} Completed)");
+            Console.WriteLine($"Good Job! You made progress on '{_shortName}'. ({_amountCompleted}/{_target} Completed)");
         }
 
     }
