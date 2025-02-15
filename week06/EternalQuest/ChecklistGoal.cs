@@ -47,7 +47,7 @@ public class ChecklistGoal : Goal
 
     public override string GetSaveString()
     {
-        return $"ChecklistGoal |{_shortName}|{_description}|{_points}|{_target}|{_bonus}|{_amountCompleted}";
+        return $"ChecklistGoal|{_shortName}|{_description}|{_points}|{_target}|{_bonus}|{_amountCompleted}";
     }
 
     internal void SetAmountCompleted(int amountCompleted)

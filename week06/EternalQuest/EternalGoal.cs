@@ -20,6 +20,6 @@ public class EternalGoal : Goal
 
     public override string GetSaveString()
     {
-        return $"EternalGoal |{_shortName}|{_description}|{_points}";
+        return $"EternalGoal|{_shortName}|{_description}|{_points}";
     }
 }

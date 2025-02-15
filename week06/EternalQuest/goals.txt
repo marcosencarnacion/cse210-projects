@@ -1,0 +1,4 @@
+0
+SimpleGoal|Give a Talk|At Church|100|False
+EternalGoal|Study scriptures|Come Follow Me|100
+ChecklistGoal|Attend temple|To do ordinaces|50|3|500|0

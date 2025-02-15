@@ -29,6 +29,11 @@ public class SimpleGoal : Goal
 
     public override string GetSaveString()
     {
-        return $"SimpleGoal |{_shortName}|{_description}|{_points}|{_isComplete}";
+        return $"SimpleGoal|{_shortName}|{_description}|{_points}|{_isComplete}";
+    }
+
+    public void SetComplete()
+    {
+        _isComplete = true;
     }
 }

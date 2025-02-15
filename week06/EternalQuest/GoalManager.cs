@@ -181,70 +181,82 @@ public class GoalManager
 
     public void SaveGoals()
     {
-        using (StreamWriter outputFile = new StreamWriter("goals.txt"))
+        Console.Write("What is the filename for the goal file? ");
+        string fileName = Console.ReadLine();
+
+        if (string.IsNullOrWhiteSpace(fileName))
+        {
+            Console.WriteLine("Invalid filename. Default name used: goals.txt");
+            fileName = "goals.txt";
+        }
+
+        using (StreamWriter outputFile = new StreamWriter(fileName))
         {
             outputFile.WriteLine(_score);
             foreach (Goal goal in _goals)
             {
-                outputFile.WriteLine(goal.GetStringRepresentation());
+                outputFile.WriteLine(goal.GetSaveString());
             }
         }
-        Console.WriteLine("Goals saved successfully!");
+        Console.WriteLine($"Goals saved successfully to {fileName}!");
     }
 
     public void LoadGoals()
     {
-        if (File.Exists("goals.txt"))
-        {
-            _goals.Clear();
-            string[] lines = File.ReadAllLines("goals.txt");
-            _score = int.Parse(lines[0]);
+        Console.Write("Name of the file to load? ");
+        string fileName = Console.ReadLine();
 
-            for (int i = 1; i < lines.Length; i++)
+        if (!File.Exists(fileName))
+        {
+            Console.WriteLine("File not found. Please check the filename and try again. ");
+            return;
+        }
+
+        _goals.Clear();
+        string[] lines = File.ReadAllLines(fileName);
+        _score = int.Parse(lines[0]);
+
+        for (int i = 1; i < lines.Length; i++)
+        {
+            string[] parts = lines[i].Split('|');
+            string type = parts[0];
+
+            if (type == "SimpleGoal")
             {
-                string[] parts = lines[i].Split(':');
-                string type = parts[0];
-                string[] details = parts[1].Split(",");
+                string name = parts[1];
+                string description = parts[2];
+                int points = int.Parse(parts[3]);
+                bool isComplete = bool.Parse(parts[4]);
 
-                Goal goal = CreateGoalFromString(type, details);
-                if (goal != null) _goals.Add(goal);
+                SimpleGoal goal = new SimpleGoal(name, description, points);
+                if (isComplete) goal.SetComplete();
+                _goals.Add(goal);
             }
-            Console.WriteLine("Goals loaded successfully!");
+            else if (type == "EternalGoal")
+            {
+                string name = parts[1];
+                string description = parts[2];
+                int points = int.Parse(parts[3]);
+
+                _goals.Add(new EternalGoal(name, description, points));
+            }
+
+            else if (type == "ChecklistGoal")
+            {
+                string name = parts[1];
+                string description = parts[2];
+                int points = int.Parse(parts[3]);
+                int target = int.Parse(parts[4]);
+                int bonus = int.Parse(parts[5]);
+                int amountCompleted = int.Parse(parts[6]);
+
+                ChecklistGoal goal = new ChecklistGoal(name, description, points, target, bonus);
+                goal.SetAmountCompleted(amountCompleted);
+                _goals.Add(goal);
+            }
+
         }
-        else
-        {
-            Console.WriteLine("No saved goals found.");
-        }
+        Console.WriteLine("Goals loaded successfully!");
     }
 
-    private Goal CreateGoalFromString(string type, string[] details)
-    {
-        string name = details[0];
-        string description = details[1];
-        int points = int.Parse(details[2]);
-
-        if (type == "SimpleGoal")
-        {
-            bool isComplete = bool.Parse(details[3]);
-            SimpleGoal goal = new SimpleGoal(name, description, points);
-            if (isComplete) goal.RecordEvent();
-            return goal;
-        }
-        else if (type == "EternalGoal")
-        {
-            return new EternalGoal(name, description, points);
-        }
-        else if (type == "ChecklistGoal")
-        {
-            int target = int.Parse(details[3]);
-            int bonus = int.Parse(details[4]);
-            int amountCompleted = int.Parse(details[5]);
-
-            ChecklistGoal goal = new ChecklistGoal(name, description, points, target, bonus);
-            goal.SetAmountCompleted(amountCompleted);
-            return goal;
-        }
-
-        return null;
-    }
 }
