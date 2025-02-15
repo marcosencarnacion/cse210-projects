@@ -49,7 +49,7 @@ public class GoalManager
                     break;
                 case "6":
                     running = false;
-                    Console.WriteLine("You have finished managing your goals today.");
+                    Console.WriteLine("Thanks for playing! You have finished managing your goals today.");
                     break;
                 default:
                     Console.WriteLine("Invalid Entry. Please enter a number between 1 and 6.");
@@ -57,13 +57,13 @@ public class GoalManager
 
             }
         }
-
-
     }
+
     public void DisplayPlayerInfo()
     {
-
+        Console.WriteLine($"You have {_score} points.");
     }
+
     public void ListGoalNames()
     {
 
@@ -74,8 +74,13 @@ public class GoalManager
     }
     public void CreateGoal()
     {
-
+        Console.WriteLine("The types of Goals are:");
+        Console.WriteLine("  1. Simple Goal");
+        Console.WriteLine("  2. Eternal Goal");
+        Console.WriteLine("  3. Checklist Goal");
+        Console.Write("Which type of goal would you like to create?");
     }
+
     public void RecordEvent()
     {
 
