@@ -1,3 +1,5 @@
-0
-EternalGoal|Study scriptures|Come Follow Me|100
-SimpleGoal|Give a talk|At Church|100|False
+650
+SimpleGoal|Give a talk|At Church|100|True
+SimpleGoal|Learn French|Learn a new language|200|True
+ChecklistGoal|Attend the temple|To do ordinancs|50|3|500|1
+EternalGoal|Serve my neighbor everyday|Serve someone daily|200

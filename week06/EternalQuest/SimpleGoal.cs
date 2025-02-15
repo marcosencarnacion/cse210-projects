@@ -12,7 +12,7 @@ public class SimpleGoal : Goal
     public override void RecordEvent()
     {
         _isComplete = true;
-        Console.WriteLine($"Congratulations! You completed {_shortName} and earned {_points} points!");
+        Console.WriteLine($"Congratulations! You completed '{_shortName}' and earned {_points} points!");
         Console.WriteLine($"You now have {_points} points.");
     }
 
