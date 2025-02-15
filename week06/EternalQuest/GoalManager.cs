@@ -151,8 +151,31 @@ public class GoalManager
 
     public void RecordEvent()
     {
+        Console.WriteLine("\nWhich goal did you accomplish?");
+
+        for (int i = 0; i < _goals.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {_goals[i].GetStringRepresentation()}");
+        }
+
+        Console.WriteLine("Enter the number of the goal: ");
+        if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= _goals.Count)
+        {
+            Goal selectedGoal = _goals[choice - 1];
+            selectedGoal.RecordEvent();
+
+            _score += selectedGoal.GetPoints();
+        }
+        else
+        {
+            Console.WriteLine("Invalid entry. Please select a valid goal number.");
+        }
+
 
     }
+
+
+
     public void SaveGoals()
     {
 
