@@ -3,6 +3,7 @@ using System;
 public class Swimming : Activity
 {
     private int _laps;
+    private const double _lapLengthKm = 0.05;
 
     public Swimming(DateTime date, int duration, int laps) : base(date, duration)
     {
@@ -11,7 +12,7 @@ public class Swimming : Activity
 
     public override double GetDistance()
     {
-        return (_laps * 50) / 1000;
+        return _laps * _lapLengthKm;
     }
 
     public override double GetSpeed()
