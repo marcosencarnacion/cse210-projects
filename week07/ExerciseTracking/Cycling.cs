@@ -4,7 +4,7 @@ public class Cycling : Activity
 {
     private double _speed;
 
-    private Cycling(DateTime date, int duration, double speed) : base(date, duration)
+    public Cycling(DateTime date, int duration, double speed) : base(date, duration)
     {
         _speed = speed;
     }
